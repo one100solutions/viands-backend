@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Viands</string>
+    <string name="app_tag">Powered by one100Solutions</string>
+    <string name="settings">Settings</string>
+
+    <!-- Test -->
+    <string name="sign_in">Sign in</string>
+    <string name="inbox">Inbox</string>
+    <string name="starred">Starred</string>
+    <string name="sent_mail">Sent Mail</string>
+    <string name="drafts">Drafts</string>
+    <string name="more_markers">+ Markers</string>
+    <string name="trash">Trash</string>
+    <string name="spam">Spam</string>
+    <string name="add">Add</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="open_user_profile">Open user profile</string>
+    <string name="open_settings">Open settings</string>
+    <string name="order">ORDER</string>
+    <string name="cart">Cart</string>
+    <string name="update">UPDATE</string>
+
+    <!-- Login fragment -->
+    <string name="hint_phone">Phone</string>
+    <string name="hint_password">Password</string>
+    <string name="signup">SIGN UP</string>
+    <string name="login">LOGIN</string>
+    <string name="order_now">ORDER NOW</string>
+    <string name="order_later">ORDER LATER</string>
+    <string name="forgot_password">Forgot password</string>
+
+    <!-- Sign up fragment -->
+    <string name="hint_signup_name">Name</string>
+    <string name="hint_signup_phone">Phone Number</string>
+    <string name="hint_signup_email">Email ID</string>
+    <string name="hint_signup_password">Password</string>
+    <string name="hint_signup_re_password">Re-enter Password</string>
+    <string name="hint_search">Search</string>
+    <string name="signup_confirm">Confirm</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+
+    <!-- Fragment names -->
+    <string name="fragment_login">Login</string>
+    <string name="fragment_signup">Sign Up</string>
+    <string name="fragment_restaurants">Restaurants</string>
+    <string name="fragment_offers">Offers</string>
+    <string name="fragment_notifications">Notifications</string>
+    <string name="fragment_menu">Menu</string>
+    <string name="fragment_signout">Sign Out</string>
+    <string name="fragment_reachus">Reach Us</string>
+    <string name="fragment_rate_us">Rate us</string>
+    <string name="fragment_credits">Credits</string>
+    <string name="fragment_about">About</string>
+    <string name="fragment_account">Account</string>
+    <string name="fragment_search">Search</string>
+    <string name="fragment_cart">Cart</string>
+    <string name="fragment_home">Menu</string>
+    <string name="fragment_orders">Orders</string>
+    <string name="fragment_update_menu">Update Menu</string>
+    <string name="fragment_process_orders">Process orders</string>
+
+
+    <!-- About fragment -->
+    <string name="about_app_version">v0.0.1</string>
+    <string name="about_app_description">A quick way to order and enjoy one\'s meal better and to permanently get rid of all delays and long queues!</string>
+    <string name="about_terms_and_conditions">Terms And Conditions</string>
+
+    <!-- reachus fragment -->
+    <string name="reachus_subject">Subject</string>
+    <string name="reachus_description">Description</string>
+    <string name="reachus_menu_done">Done</string>
+    <string name="reachus_menu_clear">Clear</string>
+    <string name="reachus_website">Website</string>
+    <string name="reachus_email">Email</string>
+    <string name="reachus_facebook">Facebook</string>
+    <string name="reachus_phone">Phone</string>
+
+    <!-- Home fragment -->
+    <string name="home_tab_search">SEARCH</string>
+    <string name="home_tab_notifications">NOTIFICATIONS</string>
+    <string name="home_tab_offers">OFFERS</string>
+
+    <!-- Restaurant fragment -->
+    <string name="find_restaurant_menu_search">Search</string>
+
+    <!-- Menu fragment -->
+    <string name="fragment_menu_category_arg_key">CATEGORY</string>
+
+    <!-- Account fragment -->
+    <string name="account_favourites">Favourites</string>
+    <string name="account_history">History</string>
+
+    <!-- Dialog -->
+    <string name="dialog_invalid_login">Invalid email or password. Please re-enter login credentials.</string>
+    <string name="dialog_ok">Okay</string>
+    <string name="dialog_accept">Accept</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_signup">Sign Up</string>
+    <string name="dialog_signing_up">Signing Up</string>
+    <string name="dialog_please_wait">Please wait ...</string>
+    <string name="dialog_verifying">Verifying</string>
+    <string name="dialog_loggin_in">Logging in</string>
+    <string name="dialog_invalid_entry">Invalid entry</string>
+    <string name="dialog_password_mismatch">Passwords mismatch. Please re-enter correctly.</string>
+    <string name="dialog_enter_otp_sent">Enter OTP sent to your phone</string>
+    <string name="dialog_finding_restaurants">Finding restaurants</string>
+    <string name="dialog_fetching_orders">Fetching all orders</string>
+    <string name="dialog_unverified_user">User not verified</string>
+    <string name="dialog_resend_otp">Resend OTP</string>
+    <string name="dialog_ordering">Ordering</string>
+    <string name="dialog_error">Error</string>
+    <string name="dialog_add_credits">Adding credits</string>
+    <string name="dialog_update_menu">Updating menu</string>
+    <string name="dialog_send_notification">Sending notification</string>
+    <string name="dialog_order_complete">Order complete</string>
+    <string name="dialog_network_connection">Please check your network connection and try again.</string>
+
+
+    <!-- Categories -->
+    <string name="menu_category_1">SOUTH INDIAN</string>
+    <string name="menu_category_2">NORTH INDIAN</string>
+    <string name="menu_category_3">CHINESE</string>
+    <string name="menu_category_4">SNACKS</string>
+    <string name="menu_category_5">JUICES</string>
+    <string name="menu_category">CATEGORY</string>
+
+
+    <!-- Cart Fragment -->
+    <string name="cart_menu_clear">Clear</string>
+    <string name="cart_menu_discard">Discard</string>
+
+    <string name="hint_add_credits_name">Name</string>
+    <string name="hint_add_credits_phone">Phone Number</string>
+    <string name="hint_add_credits_amount">Amount</string>
+
+    <string name="hint_send_notif_title">Title</string>
+    <string name="hint_send_notif_message">Message</string>
+    <string name="hint_send_bt_notif_message">Send Notification</string>
+
+    <string name="add_credits">Add Credits</string>
+
+</resources>

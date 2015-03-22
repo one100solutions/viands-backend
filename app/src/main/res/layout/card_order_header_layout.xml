@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/order_card_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/order_card_order_id_textview_size"
+            android:padding="@dimen/order_card_textview_padding"
+            android:textStyle="bold"
+            android:id="@+id/tvOrderId" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:textSize="@dimen/order_card_time_textview_size"
+            android:padding="@dimen/order_card_textview_padding"
+            android:id="@+id/tvOrderTime" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic|bold"
+            android:textSize="@dimen/order_card_order_status_textview_size"
+            android:padding="@dimen/order_card_textview_padding"
+            android:id="@+id/tvOrderStatus" />
+
+    </LinearLayout>
+
+</LinearLayout>

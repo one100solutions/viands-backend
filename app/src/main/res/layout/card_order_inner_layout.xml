@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:background="@color/white"
+    android:weightSum="6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivDishImage"
+                android:layout_width="@dimen/order_card_inner_layout_dish_size"
+                android:layout_height="@dimen/order_card_inner_layout_dish_size"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/viands_icon" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@id/tvDishName"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@id/tvDishQuantity"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

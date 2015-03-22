@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/restaurant_card_main_layout_height">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ogara_rvce"
+            android:scaleType="fitCenter"
+            android:id="@+id/ivRestaurant" />
+
+        <ImageView
+            android:layout_width="@dimen/restaurant_card_open_closed_imageview_size"
+            android:layout_height="@dimen/restaurant_card_open_closed_imageview_size"
+            android:layout_margin="@dimen/restaurant_card_open_closed_imageview_margin"
+            android:id="@+id/ivOpenClosed"
+            android:layout_gravity="right|top" />
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Food Court - RVCE"
+            android:id="@+id/tvRestaurantName"
+            android:textSize="@dimen/restaurant_card_restaurant_name_textview_size"
+            android:paddingLeft="@dimen/restaurant_card_textview_padding_left"
+            android:paddingBottom="@dimen/restaurant_card_textview_padding_bottom"
+            android:textColor="@color/gray3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Koromangala"
+            android:id="@+id/tvRestaurantLocation"
+            android:textSize="@dimen/restaurant_card_restaurant_location_textview_size"
+            android:paddingLeft="@dimen/restaurant_card_textview_padding_left"
+            android:paddingBottom="@dimen/restaurant_card_textview_padding_bottom"
+            android:textColor="@color/gray2" />
+
+    </LinearLayout>
+
+    <!-- restaurant card actions
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/restaurant_card_action_layout_padding"
+        android:layout_weight="3">
+
+        <ImageView
+            android:layout_width="@dimen/restaurant_card_action_image_size"
+            android:layout_height="@dimen/restaurant_card_action_image_size"
+            android:src="@drawable/ic_menu_white_24dp"
+            android:id="@+id/ivMenu"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="@dimen/restaurant_card_action_image_size"
+            android:layout_height="@dimen/restaurant_card_action_image_size"
+            android:src="@drawable/ic_phone_white_24dp"
+            android:id="@+id/ivPhone"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="@dimen/restaurant_card_action_image_size"
+            android:layout_height="@dimen/restaurant_card_action_image_size"
+            android:src="@drawable/ic_location_on_white_24dp"
+            android:id="@+id/ivLocation"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    -->
+
+</LinearLayout>

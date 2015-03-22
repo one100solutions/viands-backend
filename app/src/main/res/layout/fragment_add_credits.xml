@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/signup_fragment_margin_top"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_add_credits_phone"
+            android:id="@+id/edtUserPhone"
+            android:inputType="phone"
+            app:iconLeft="@drawable/ic_phone"
+            app:baseColor="@color/gray_hot"
+            app:iconPadding="0dp"
+            app:maxCharacters="10"
+            app:minCharacters="10" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_add_credits_amount"
+            android:id="@+id/edtAmount"
+            android:inputType="number"
+            app:iconLeft="@drawable/ic_credit_card_white_24dp"
+            app:baseColor="@color/gray_hot"
+            app:iconPadding="0dp"
+            app:maxCharacters="30" />
+
+
+    </LinearLayout>
+
+    <com.gc.materialdesign.views.ButtonRectangle
+        android:id="@+id/btAddCredits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="@string/add_credits"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/button_text_size" />
+
+</RelativeLayout>

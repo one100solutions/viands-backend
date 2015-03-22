@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- Theme colors -->
+    <color name="colorPrimary">#f7772a</color>
+    <color name="colorPrimaryDark">#E64A19</color>
+    <color name="colorAccent">#795548</color>
+
+    <!-- Text Colours -->
+    <color name="dashboard_menu_text_color">#e6ffffff</color>
+    <color name="menu_title_color">#ffffffff</color>
+    <color name="button_text_color">#ff8bd0f2</color>
+    <color name="bold_text_color">#ffffffff</color>
+    <color name="regular_text_color">#ffffffff</color>
+    <color name="italic_text_color">#ffffffff</color>
+    <color name="small_text_color">#ffffffff</color>
+    <color name="edit_text_color">#ff666666</color>
+    <color name="edit_hint_text_color">#ffaaaaaa</color>
+
+
+    <color name="blue">#2980b9</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="gray">#c9c9c9</color>
+    <color name="gray1">#dddddd</color>
+    <color name="gray2">#aaaaaa</color>
+    <color name="gray3">#666666</color>
+    <color name="gray4">#222222</color>
+    <color name="gray_light">#eeeeee</color>
+    <color name="gray_hot">#272727</color>
+    <color name="gray_hot_hint">#44272727</color>
+    <color name="red">#ff942801</color>
+    <color name="cyan">#ff00ffff</color>
+
+    <color name="button_color">#ff5252</color>
+    <color name="red_gradient_btn_text_color_revised">#ffffffff</color>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/offer_card_layout_margin">
+
+        <ImageView
+            android:layout_width="@dimen/offer_card_image_size"
+            android:layout_height="@dimen/offer_card_image_size"
+            android:id="@+id/ivNotification"
+            android:src="@drawable/ic_notifications_on_white_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivNotification"
+            android:textSize="@dimen/offer_card_title_textview_size"
+            android:padding="@dimen/offer_card_textview_padding"
+            android:textStyle="bold"
+            android:text="ZXW123"
+            android:id="@+id/tvNotificationTitle" />
+
+        <!--
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivOfferIcon"
+            android:layout_below="@+id/tvOfferTitle"
+            android:textSize="@dimen/offer_card_validity_textview_size"
+            android:padding="@dimen/offer_card_textview_padding"
+            android:text="24 June 2014"
+            android:id="@+id/tvOfferValidity" />
+
+            -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivNotification"
+            android:layout_below="@+id/tvNotificationTitle"
+            android:textStyle="italic"
+            android:textSize="@dimen/offer_card_description_textview_size"
+            android:padding="@dimen/offer_card_textview_padding"
+            android:text="Get 50 credits on every recharge of 500"
+            android:id="@+id/tvNotificationMessage" />
+
+    </RelativeLayout>
+
+</LinearLayout>

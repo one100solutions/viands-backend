@@ -1,0 +1,64 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!--Customize here the subject of your application-->
+    <style name="myTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="NoActionBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Account Light theme -->
+    <style name="AccountLight" parent="MaterialNavigationDrawerTheme.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="singleAccount">true</item>
+    </style>
+
+    <style name="MenuTitleTextView">
+        <item name="android:textSize">@dimen/menu_title_text_size</item>
+        <item name="android:textColor">@color/menu_title_color</item>
+        <item name="android:capitalize">characters</item>
+    </style>
+
+    <style name="ButtonTextView">
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/button_text_color</item>
+    </style>
+
+    <style name="BoldTextView">
+        <item name="android:textSize">@dimen/bold_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/bold_text_color</item>
+    </style>
+
+    <style name="RegularTextView">
+        <item name="android:textSize">@dimen/regular_text_size</item>
+        <item name="android:textColor">@color/regular_text_color</item>
+    </style>
+
+    <style name="ItalicTextView">
+        <item name="android:textSize">@dimen/italic_text_size</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/italic_text_color</item>
+    </style>
+
+    <style name="SmallTextView">
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:textColor">@color/small_text_color</item>
+    </style>
+
+</resources>

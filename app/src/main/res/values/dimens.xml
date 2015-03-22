@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="navigation_drawer_width">240dp</dimen>
+
+    <!-- Text Sizes -->
+    <dimen name="dashboard_menu_text_size">16sp</dimen>
+    <dimen name="menu_title_text_size">30sp</dimen>
+    <dimen name="button_text_size">20sp</dimen>
+    <dimen name="bold_text_size">16sp</dimen>
+    <dimen name="regular_text_size">16sp</dimen>
+    <dimen name="italic_text_size">16sp</dimen>
+    <dimen name="small_text_size">12sp</dimen>
+    <dimen name="edit_text_size">14sp</dimen>
+
+    <!-- Login fragment -->
+    <dimen name="login_fragment_app_icon_height">140dp</dimen>
+    <dimen name="login_fragment_app_icon_width">140dp</dimen>
+    <dimen name="login_fragment_app_icon_margin">20dp</dimen>
+    <dimen name="login_fragment_margin_left">15dp</dimen>
+    <dimen name="login_fragment_margin_right">15dp</dimen>
+    <dimen name="login_fragment_margin_bottom">8dp</dimen>
+    <dimen name="login_fragment_margin_top">15dp</dimen>
+    <dimen name="login_fragment_padding">8dp</dimen>
+    <dimen name="login_fragment_button_height">40dp</dimen>
+    <dimen name="login_fragment_text_view_height">40dp</dimen>
+    <dimen name="login_fragment_app_tag_textview_size">16dp</dimen>
+    <dimen name="login_fragment_app_tag_margin">10dp</dimen>
+
+
+    <!-- Sign up fragment -->
+    <dimen name="signup_fragment_margin_up">50dp</dimen>
+    <dimen name="signup_fragment_margin_left">15dp</dimen>
+    <dimen name="signup_fragment_margin_right">15dp</dimen>
+    <dimen name="signup_fragment_margin_bottom">8dp</dimen>
+    <dimen name="signup_fragment_margin_top">25dp</dimen>
+    <dimen name="signup_fragment_padding">8dp</dimen>
+    <dimen name="signup_fragment_button_height">40dp</dimen>
+    <dimen name="signup_fragment_text_view_height">40dp</dimen>
+    <dimen name="signup_fragment_otp_dialog_text_size">18sp</dimen>
+
+
+    <!-- About fragment -->
+    <dimen name="about_fragment_app_icon_width">160dp</dimen>
+    <dimen name="about_fragment_app_icon_height">160dp</dimen>
+    <dimen name="about_fragment_padding">20dp</dimen>
+    <dimen name="about_fragment_app_version_textview_size">25sp</dimen>
+    <dimen name="about_fragment_app_description_textview_size">20sp</dimen>
+
+    <!-- Feedback fragment -->
+    <dimen name="feedback_fragment_edittext_size">18sp</dimen>
+    <dimen name="feedback_fragment_edittext_padding_top">14dp</dimen>
+    <dimen name="feedback_fragment_edittext_padding_left">20dp</dimen>
+    <dimen name="feedback_fragment_edittext_padding_right">20dp</dimen>
+    <dimen name="feedback_fragment_edittext_padding_bottom">20dp</dimen>
+    <dimen name="feedback_fragment_edittext_padding">20dp</dimen>
+
+    <!-- Restaurant card -->
+    <dimen name="restaurant_card_action_image_size">30dp</dimen>
+    <dimen name="restaurant_card_action_layout_padding">15dp</dimen>
+    <dimen name="restaurant_card_main_layout_height">200dp</dimen>
+    <dimen name="restaurant_card_restaurant_name_textview_size">25sp</dimen>
+    <dimen name="restaurant_card_restaurant_location_textview_size">18sp</dimen>
+    <dimen name="restaurant_card_textview_padding_left">15dp</dimen>
+    <dimen name="restaurant_card_textview_padding_bottom">7dp</dimen>
+    <dimen name="restaurant_card_open_closed_imageview_size">40dp</dimen>
+    <dimen name="restaurant_card_open_closed_imageview_margin">4dp</dimen>
+
+    <!-- Dish card -->
+    <dimen name="dish_card_action_image_size">30dp</dimen>
+    <dimen name="dish_card_action_layout_padding">15dp</dimen>
+    <dimen name="dish_card_main_layout_height">200dp</dimen>
+    <dimen name="dish_card_dish_name_textview_size">20sp</dimen>
+    <dimen name="dish_card_dish_description_textview_size">13sp</dimen>
+    <dimen name="dish_card_dish_cost_textview_size">15sp</dimen>
+    <dimen name="dish_card_dish_cost_padding">12dp</dimen>
+    <dimen name="dish_card_dish_name_textview_padding_top">15dp</dimen>
+    <dimen name="dish_card_dish_name_textview_padding_left">12dp</dimen>
+    <dimen name="dish_card_dish_name_textview_padding_bottom">7dp</dimen>
+    <dimen name="dish_card_dish_name_textview_padding_right">12dp</dimen>
+    <dimen name="dish_card_dish_description_textview_padding_left">12dp</dimen>
+    <dimen name="dish_card_dish_description_textview_padding_right">12dp</dimen>
+
+    <!-- Offer card -->
+    <dimen name="offer_card_image_size">70dp</dimen>
+    <dimen name="offer_card_layout_margin">10dp</dimen>
+    <dimen name="offer_card_image_margin">10dp</dimen>
+    <dimen name="offer_card_title_textview_size">20sp</dimen>
+    <dimen name="offer_card_textview_padding">2dp</dimen>
+    <dimen name="offer_card_validity_textview_size">15sp</dimen>
+    <dimen name="offer_card_description_textview_size">16sp</dimen>
+
+    <!-- UserObject fragment -->
+    <dimen name="account_fragment_header_layout_height">200dp</dimen>
+    <dimen name="account_fragment_user_image_size">120dp</dimen>
+    <dimen name="account_fragment_user_image_margin">20dp</dimen>
+    <dimen name="account_fragment_user_name_textview_size">25sp</dimen>
+    <dimen name="account_fragment_user_name_textview_padding">15dp</dimen>
+    <dimen name="account_fragment_section_height">64dp</dimen>
+    <dimen name="account_fragment_section_image_margin_left">32dp</dimen>
+    <dimen name="account_fragment_section_image_size">25dp</dimen>
+    <dimen name="account_fragment_section_text_size">16sp</dimen>
+    <dimen name="account_fragment_section_text_margin_left">100dp</dimen>
+
+    <!-- Search fragment -->
+    <dimen name="search_fragment_margin_left">5dp</dimen>
+    <dimen name="search_fragment_margin_right">5dp</dimen>
+    <dimen name="search_fragment_edt_search_margin">10dp</dimen>
+    <dimen name="search_fragment_edt_search_height">40dp</dimen>
+    <dimen name="search_fragment_sp_categories_margin">10dp</dimen>
+    <dimen name="search_fragment_sp_categories_height">40dp</dimen>
+    <dimen name="search_fragment_categories_textview_size">16sp</dimen>
+    <dimen name="search_fragment_category_textview_margin">10dp</dimen>
+
+    <!-- Cart card -->
+    <dimen name="cart_card_image_size">70dp</dimen>
+    <dimen name="cart_card_layout_margin">7dp</dimen>
+    <dimen name="cart_card_dish_name_textview_size">20sp</dimen>
+    <dimen name="cart_card_textview_padding">2dp</dimen>
+    <dimen name="cart_card_quantity_textview_size">15sp</dimen>
+    <dimen name="cart_card_cost_textview_size">17sp</dimen>
+
+    <!-- Cart fragment -->
+    <dimen name="cart_fragment_cost_textview_size">20sp</dimen>
+
+    <!-- Order card -->
+    <dimen name="order_card_margin">5dp</dimen>
+    <dimen name="order_card_layout_margin">7dp</dimen>
+    <dimen name="order_card_order_id_textview_size">20sp</dimen>
+    <dimen name="order_card_textview_padding">2dp</dimen>
+    <dimen name="order_card_time_textview_size">15sp</dimen>
+    <dimen name="order_card_message_textview_size">15sp</dimen>
+    <dimen name="order_card_order_type_textview_size">17sp</dimen>
+    <dimen name="order_card_order_status_textview_size">17sp</dimen>
+    <dimen name="order_card_inner_layout_dish_size">50dp</dimen>
+
+
+    <!--  Reach Us  -->
+    <dimen name="reachus_fragment_header_layout_height">200dp</dimen>
+    <dimen name="reachus_fragment_user_image_size">120dp</dimen>
+    <dimen name="reachus_fragment_user_image_margin">20dp</dimen>
+    <dimen name="reachus_fragment_user_name_textview_size">25sp</dimen>
+    <dimen name="reachus_fragment_user_name_textview_padding">15dp</dimen>
+    <dimen name="reachus_fragment_section_height">64dp</dimen>
+    <dimen name="reachus_fragment_section_image_margin_left">32dp</dimen>
+    <dimen name="reachus_fragment_section_image_size">25dp</dimen>
+    <dimen name="reachus_fragment_section_text_size">16sp</dimen>
+    <dimen name="reachus_fragment_section_text_margin_left">100dp</dimen>
+
+    <dimen name="card_base_empty_height">0dp</dimen>
+
+
+    <!-- Update Menu card -->
+    <dimen name="update_menu_card_height">120dp</dimen>
+    <dimen name="update_menu_card_image_size">80dp</dimen>
+    <dimen name="update_menu_card_checkbox_size">25dp</dimen>
+    <dimen name="update_menu_card_textview_size">20sp</dimen>
+
+</resources>

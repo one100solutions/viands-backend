@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <it.gmariotti.cardslib.library.view.CardListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llOrderBox"
+        android:id="@+id/clvCart" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llOrderBox"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/cart_fragment_cost_textview_size"
+            android:id="@+id/tvTotalAmount"
+            android:text="TOTAL AMOUNT : 45 " />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.gc.materialdesign.views.ButtonRectangle
+                android:id="@+id/btOrderNow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="@string/order_now"
+                android:layout_gravity="bottom"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textSize="@dimen/button_text_size" />
+
+            <com.gc.materialdesign.views.ButtonRectangle
+                android:id="@+id/btOrderLater"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="@string/order_later"
+                android:layout_gravity="bottom"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textSize="@dimen/button_text_size" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

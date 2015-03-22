@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/account_fragment_header_layout_height"
+            android:background="@color/colorPrimaryDark">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfileImage"
+                android:layout_width="@dimen/account_fragment_user_image_size"
+                android:layout_height="@dimen/account_fragment_user_image_size"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/account_fragment_user_image_margin"
+                android:src="@drawable/viands_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tvUserName"
+                android:layout_alignParentBottom="true"
+                android:textSize="@dimen/account_fragment_user_name_textview_size"
+                android:padding="@dimen/account_fragment_user_name_textview_padding"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.gc.materialdesign.views.LayoutRipple
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/account_fragment_section_height"
+                android:background="@color/white"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="@dimen/account_fragment_section_image_size"
+                    android:layout_height="@dimen/account_fragment_section_image_size"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/ivPhone"
+                    android:layout_marginLeft="@dimen/account_fragment_section_image_margin_left"
+                    android:src="@drawable/ic_phone_white_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvPhone"
+                    android:textSize="@dimen/account_fragment_section_text_size"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/account_fragment_section_text_margin_left" />
+            </com.gc.materialdesign.views.LayoutRipple>
+
+            <com.gc.materialdesign.views.LayoutRipple
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/account_fragment_section_height"
+                android:background="@color/white"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="@dimen/account_fragment_section_image_size"
+                    android:layout_height="@dimen/account_fragment_section_image_size"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/ivEmail"
+                    android:layout_marginLeft="@dimen/account_fragment_section_image_margin_left"
+                    android:src="@drawable/ic_mail_white_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvEmail"
+                    android:textSize="@dimen/account_fragment_section_text_size"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/account_fragment_section_text_margin_left" />
+            </com.gc.materialdesign.views.LayoutRipple>
+
+            <com.gc.materialdesign.views.LayoutRipple
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/account_fragment_section_height"
+                android:background="@color/white"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="@dimen/account_fragment_section_image_size"
+                    android:layout_height="@dimen/account_fragment_section_image_size"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/ivCredits"
+                    android:layout_marginLeft="@dimen/account_fragment_section_image_margin_left"
+                    android:src="@drawable/ic_credit_card_white_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvCredits"
+                    android:textSize="@dimen/account_fragment_section_text_size"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/account_fragment_section_text_margin_left" />
+            </com.gc.materialdesign.views.LayoutRipple>
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+    <ImageView
+        android:id="@+id/ivAppIcon"
+        android:layout_width="@dimen/login_fragment_app_icon_width"
+        android:layout_height="@dimen/login_fragment_app_icon_height"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/viands_icon"
+        android:layout_marginBottom="@dimen/login_fragment_app_icon_margin"
+        android:layout_above="@+id/llLoginBox" />
+
+        -->
+
+    <ImageView
+        android:id="@+id/ivAppIcon"
+        android:layout_width="@dimen/login_fragment_app_icon_width"
+        android:layout_height="@dimen/login_fragment_app_icon_height"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/viands_startup_logo" />
+
+    <LinearLayout
+        android:id="@+id/llLoginBox1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtUserName"
+            android:hint="@string/hint_signup_name"
+            app:iconLeft="@drawable/ic_person_white_24dp"
+            app:baseColor="@color/gray_hot"
+            app:iconPadding="0dp"
+            app:maxCharacters="20"
+            />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_password"
+            android:id="@+id/edtUserPassword"
+            android:inputType="textPassword"
+            app:iconLeft="@drawable/ic_lock_white_24dp"
+            app:baseColor="@color/gray_hot"
+            app:iconPadding="0dp"
+            app:maxCharacters="15" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llLoginBox2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true">
+
+
+        <com.gc.materialdesign.views.ButtonRectangle
+            android:id="@+id/btLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/login"
+            android:layout_gravity="bottom"
+            android:textColor="@color/white"
+            android:layout_weight="2"
+            android:textSize="@dimen/button_text_size" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_margin="@dimen/login_fragment_app_tag_margin"
+        android:textSize="@dimen/login_fragment_app_tag_textview_size"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/tvAppTag"
+        android:text="@string/app_tag" />
+
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/about_fragment_padding"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/about_fragment_app_icon_width"
+            android:layout_height="@dimen/about_fragment_app_icon_height"
+            android:src="@drawable/viands_icon"
+            android:id="@+id/ivAppIcon" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/about_fragment_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_app_version"
+                android:id="@+id/tvAppVersion"
+                android:textSize="@dimen/about_fragment_app_version_textview_size"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_app_description"
+        android:id="@+id/tvAppDescription"
+        android:paddingLeft="@dimen/about_fragment_padding"
+        android:paddingRight="@dimen/about_fragment_padding"
+        android:paddingBottom="@dimen/about_fragment_padding"
+        android:textSize="@dimen/about_fragment_app_description_textview_size"
+        android:layout_alignParentBottom="true" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/about_fragment_padding"
+        android:orientation="horizontal">
+
+
+        <com.gc.materialdesign.views.ButtonRectangle
+            android:id="@+id/btTermsAndConditions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/about_terms_and_conditions"
+            android:textSize="@dimen/button_text_size" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/offer_card_layout_margin">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivDishImage"
+            android:layout_width="@dimen/cart_card_image_size"
+            android:layout_height="@dimen/cart_card_image_size"
+            android:layout_margin="@dimen/cart_card_layout_margin"
+            android:src="@drawable/dish" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivDishImage"
+            android:textSize="@dimen/cart_card_dish_name_textview_size"
+            android:padding="@dimen/cart_card_textview_padding"
+            android:textStyle="bold"
+            android:text="Gobi Manchurian"
+            android:id="@+id/tvDishName" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivDishImage"
+            android:layout_below="@+id/tvDishName"
+            android:textStyle="italic"
+            android:textSize="@dimen/cart_card_quantity_textview_size"
+            android:padding="@dimen/cart_card_textview_padding"
+            android:text="Quantity : 2"
+            android:id="@+id/tvDishQuantity" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivDishImage"
+            android:layout_below="@+id/tvDishQuantity"
+            android:textStyle="italic|bold"
+            android:textSize="@dimen/cart_card_cost_textview_size"
+            android:padding="@dimen/cart_card_textview_padding"
+            android:text="Rs 45"
+            android:id="@+id/tvDishCost" />
+
+    </RelativeLayout>
+
+</LinearLayout>
