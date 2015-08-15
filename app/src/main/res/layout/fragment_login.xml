@@ -42,8 +42,7 @@
             app:iconLeft="@drawable/ic_person_white_24dp"
             app:baseColor="@color/gray_hot"
             app:iconPadding="0dp"
-            app:maxCharacters="20"
-            />
+            app:maxCharacters="20" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
@@ -77,6 +76,7 @@
             android:layout_gravity="bottom"
             android:textColor="@color/white"
             android:layout_weight="2"
+            app:animate="false"
             android:textSize="@dimen/button_text_size" />
 
 

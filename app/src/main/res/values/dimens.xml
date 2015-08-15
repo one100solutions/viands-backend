@@ -160,4 +160,11 @@
     <dimen name="update_menu_card_checkbox_size">25dp</dimen>
     <dimen name="update_menu_card_textview_size">20sp</dimen>
 
+    <dimen name="open_close_textview_size">35sp</dimen>
+    <dimen name="open_close_button_size">120dp</dimen>
+    <dimen name="open_close_button_text_size">45sp</dimen>
+
+    <dimen name="main_account_card_text_size">20sp</dimen>
+    <dimen name="main_account_card_header_text_size">20sp</dimen>
+
 </resources>

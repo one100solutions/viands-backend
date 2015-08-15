@@ -40,12 +40,13 @@
     </LinearLayout>
 
     <com.gc.materialdesign.views.ButtonRectangle
-        android:id="@+id/btAddCredits"
+        android:id="@+id/btRefundCredits"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:text="@string/add_credits"
         android:layout_alignParentBottom="true"
-        android:textSize="@dimen/button_text_size" />
+        android:textSize="@dimen/button_text_size"
+        app:animate="false" />
 
 </RelativeLayout>

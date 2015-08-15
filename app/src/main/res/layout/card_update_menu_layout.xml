@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
-    android:weightSum="4"
+    android:weightSum="5"
     android:layout_width="match_parent"
     android:layout_height="@dimen/update_menu_card_height">
 
@@ -70,6 +70,23 @@
             android:textColor="@color/gray3"
             android:textSize="@dimen/update_menu_card_textview_size"
             android:text="Rs 150" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <CheckBox
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:id="@+id/cbSelect">
+
+        </CheckBox>
 
     </RelativeLayout>
 

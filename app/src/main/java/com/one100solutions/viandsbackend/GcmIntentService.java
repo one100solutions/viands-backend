@@ -10,10 +10,8 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
+import com.one100solutions.viandsbackend.fragments.ProcessOrdersFragment;
 
-/**
- * Created by sujith on 22/3/15.
- */
 public class GcmIntentService extends IntentService {
 
     public static final int NOTIFICATION_ID = 1;
@@ -63,9 +61,10 @@ public class GcmIntentService extends IntentService {
                         .setContentText(msg2)
                         .setAutoCancel(true);
 
-
         // mBuilder.setContentIntent(contentIntent);
         mNotificationManager.notify(NOTIFICATION_ID, mBuilder.build());
+
+
     }
 
 }

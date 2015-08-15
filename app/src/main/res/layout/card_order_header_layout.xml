@@ -10,13 +10,32 @@
         android:layout_margin="@dimen/order_card_margin"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/order_card_order_id_textview_size"
-            android:padding="@dimen/order_card_textview_padding"
-            android:textStyle="bold"
-            android:id="@+id/tvOrderId" />
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/order_card_order_id_textview_size"
+                android:padding="@dimen/order_card_textview_padding"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:id="@+id/tvOrderId" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic|bold"
+                android:textSize="@dimen/order_card_order_status_textview_size"
+                android:padding="@dimen/order_card_textview_padding"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:id="@+id/tvTotalAmount" />
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
@@ -33,6 +52,15 @@
             android:textSize="@dimen/order_card_order_status_textview_size"
             android:padding="@dimen/order_card_textview_padding"
             android:id="@+id/tvOrderStatus" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/order_card_order_id_textview_size"
+            android:padding="@dimen/order_card_textview_padding"
+            android:textStyle="bold"
+            android:id="@+id/tvOrderUserName" />
+
 
     </LinearLayout>
 

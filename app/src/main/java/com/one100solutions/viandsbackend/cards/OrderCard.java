@@ -93,7 +93,7 @@ public class OrderCard extends CardWithList {
         boolean found = false;
         DishObject dishObject = null;
         String id = cartObject.getId();
-        if (ViandsApplication.restaurantList != null || ViandsApplication.restaurantList.size() != 0) {
+        if (ViandsApplication.restaurantList != null && ViandsApplication.restaurantList.size() != 0) {
 
             for (DishObject menu : ViandsApplication.restaurantList.get(0).getMenu()) {
                 if (menu.getId().equals(id)) {
@@ -160,19 +160,28 @@ public class OrderCard extends CardWithList {
         @Override
         public void setupInnerViewElements(ViewGroup parent, View view) {
 
+
             TextView tvOrderId = (TextView) view.findViewById(R.id.tvOrderId);
             TextView tvOrderTime = (TextView) view.findViewById(R.id.tvOrderTime);
             TextView tvOrderStatus = (TextView) view.findViewById(R.id.tvOrderStatus);
+            TextView tvTotalAmount = (TextView) view.findViewById(R.id.tvTotalAmount);
+
+            TextView tvOrderUserName = (TextView) view.findViewById(R.id.tvOrderUserName);
+
+
+            tvOrderUserName.setText(orderObject.getName());
 
             tvOrderId.setText(orderObject.getId());
             tvOrderTime.setText("Time: " + orderObject.getTime());
+            tvTotalAmount.setText("\u20B9 " + String.valueOf(orderObject.getTotalAmount()));
 
-            if (orderObject.isComplete()) {
+            if (orderObject.isComplete() && orderObject.isDelivered()) {
+                tvOrderStatus.setText("Status: Delivered");
+            } else if (orderObject.isComplete()) {
                 tvOrderStatus.setText("Status: Complete");
             } else {
                 tvOrderStatus.setText("Status: Processing");
             }
-
 
         }
     }

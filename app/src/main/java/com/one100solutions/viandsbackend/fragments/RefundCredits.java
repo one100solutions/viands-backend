@@ -15,12 +15,12 @@ import com.one100solutions.viandsbackend.utils.OnJSONResponseCallback;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 
-public class AddCredits extends Fragment {
+public class RefundCredits extends Fragment {
 
-    private static final String LOG_TAG = "Add credits Fragment";
+    private static final String LOG_TAG = "Refund credits Fragment";
 
     private MaterialEditText edtUserPhone, edtAmount;
-    private ButtonRectangle btAddCredits;
+    private ButtonRectangle btRefundCredits;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class AddCredits extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater
-                .inflate(R.layout.fragment_add_credits, container, false);
+                .inflate(R.layout.fragment_refund_credits, container, false);
         initView(view);
 
         return view;
@@ -44,12 +44,12 @@ public class AddCredits extends Fragment {
         edtAmount = (MaterialEditText) view.findViewById(R.id.edtAmount);
 
 
-        btAddCredits = (ButtonRectangle) view.findViewById(R.id.btRefundCredits);
-        btAddCredits.setOnClickListener(new View.OnClickListener() {
+        btRefundCredits = (ButtonRectangle) view.findViewById(R.id.btRefundCredits);
+        btRefundCredits.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (checkEntries()) {
-                    btAddCredits.setEnabled(false);
+                    btRefundCredits.setEnabled(false);
                     verify();
                 }
 
@@ -125,7 +125,7 @@ public class AddCredits extends Fragment {
                     //goToHome();
                     System.out.println("Adding credits successful");
                 }
-                btAddCredits.setEnabled(true);
+                btRefundCredits.setEnabled(true);
             }
         });
     }

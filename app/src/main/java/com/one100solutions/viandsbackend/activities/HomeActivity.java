@@ -12,10 +12,13 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.one100solutions.viandsbackend.R;
 import com.one100solutions.viandsbackend.fragments.AddCredits;
+import com.one100solutions.viandsbackend.fragments.MainAccountFragment;
 import com.one100solutions.viandsbackend.fragments.NotificationFragment;
+import com.one100solutions.viandsbackend.fragments.OpenCloseRestaurant;
 import com.one100solutions.viandsbackend.fragments.ProcessOrdersFragment;
 import com.one100solutions.viandsbackend.fragments.UpdateMenuFragment;
 import com.one100solutions.viandsbackend.objects.UserObject;
+import com.one100solutions.viandsbackend.utils.OnJSONResponseCallback;
 import com.one100solutions.viandsbackend.utils.SessionManager;
 import com.one100solutions.viandsbackend.utils.ViandsRestClient;
 
@@ -60,12 +63,21 @@ public class HomeActivity extends MaterialNavigationDrawer {
         MaterialSection addCredits = newSection(getString(R.string.fragment_credits), R.drawable.ic_credit_card_white_24dp, new AddCredits());
         this.addSection(addCredits);
 
+        MaterialSection accounts = newSection(getString(R.string.fragment_accounts), R.drawable.ic_description_white_24dp, new MainAccountFragment());
+        this.addSection(accounts);
+
+        //MaterialSection refundCredits = newSection(getString(R.string.fragment_refund_credits), R.drawable.ic_assignment_return_white_24dp, new RefundCredits());
+        //this.addSection(refundCredits);
+
         MaterialSection updateMenu = newSection(getString(R.string.fragment_update_menu), R.drawable.ic_menu_white_24dp, new UpdateMenuFragment());
         this.addSection(updateMenu);
 
 
         MaterialSection notification = newSection(getString(R.string.fragment_notifications), R.drawable.ic_notifications_white_24dp, new NotificationFragment());
         this.addSection(notification);
+
+        MaterialSection openClose = newSection(getString(R.string.fragment_open_close_restaurant), R.drawable.ic_lock_white_24dp, new OpenCloseRestaurant());
+        this.addSection(openClose);
 //
 //
 //        MaterialSection aboutSection = newSection(getString(R.string.fragment_about), R.drawable.ic_info_white_24dp, new AboutFragment());
@@ -76,8 +88,15 @@ public class HomeActivity extends MaterialNavigationDrawer {
 
         this.setBackPattern(MaterialNavigationDrawer.BACKPATTERN_BACK_TO_FIRST);
 
+        context = this;
 
-        context = getApplicationContext();
+        ViandsApplication.getMenu(context, new OnJSONResponseCallback() {
+            @Override
+            public void onJSONResponse(boolean success) {
+
+            }
+        });
+
 
         if (checkPlayServices()) {
             gcm = GoogleCloudMessaging.getInstance(this);

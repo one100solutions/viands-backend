@@ -31,6 +31,7 @@
     <string name="order_now">ORDER NOW</string>
     <string name="order_later">ORDER LATER</string>
     <string name="forgot_password">Forgot password</string>
+    <string name="refresh">Refresh</string>
 
     <!-- Sign up fragment -->
     <string name="hint_signup_name">Name</string>
@@ -63,11 +64,13 @@
     <string name="fragment_account">Account</string>
     <string name="fragment_search">Search</string>
     <string name="fragment_cart">Cart</string>
+    <string name="fragment_accounts">Accounts</string>
     <string name="fragment_home">Menu</string>
+    <string name="fragment_refund_credits">Refund credits</string>
     <string name="fragment_orders">Orders</string>
     <string name="fragment_update_menu">Update Menu</string>
     <string name="fragment_process_orders">Process orders</string>
-
+    <string name="fragment_open_close_restaurant">Open/Close</string>
 
     <!-- About fragment -->
     <string name="about_app_version">v0.0.1</string>
@@ -119,9 +122,11 @@
     <string name="dialog_ordering">Ordering</string>
     <string name="dialog_error">Error</string>
     <string name="dialog_add_credits">Adding credits</string>
+    <string name="dialog_refund_credits">Refunding credits</string>
     <string name="dialog_update_menu">Updating menu</string>
     <string name="dialog_send_notification">Sending notification</string>
     <string name="dialog_order_complete">Order complete</string>
+    <string name="dialog_order_delivered">Order delivered</string>
     <string name="dialog_network_connection">Please check your network connection and try again.</string>
 
 
@@ -141,11 +146,21 @@
     <string name="hint_add_credits_name">Name</string>
     <string name="hint_add_credits_phone">Phone Number</string>
     <string name="hint_add_credits_amount">Amount</string>
+    <string name="hint_refund_credits_name">Name</string>
+    <string name="hint_refund_credits_phone">Phone Number</string>
+    <string name="hint_refund_credits_amount">Amount</string>
 
     <string name="hint_send_notif_title">Title</string>
     <string name="hint_send_notif_message">Message</string>
     <string name="hint_send_bt_notif_message">Send Notification</string>
 
     <string name="add_credits">Add Credits</string>
+    <string name="refund_credits">Refund Credits</string>
+
+    <string name="open_restaurant_msg">Do you want to open restaurant??</string>
+    <string name="close_restaurant_msg">Do you want to close restaurant??</string>
+
+    <string name="open_restaurant">Open restaurant</string>
+    <string name="close_restaurant">Close Restaurant</string>
 
 </resources>

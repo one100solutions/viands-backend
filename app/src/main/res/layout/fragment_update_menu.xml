@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -11,13 +12,14 @@
         android:text="@string/update"
         android:layout_alignParentBottom="true"
         android:textColor="@color/white"
+        app:animate="false"
         android:textSize="@dimen/button_text_size" />
 
-    <it.gmariotti.cardslib.library.view.CardListView
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/btUpdate"
-        android:id="@+id/clvUpdateMenu" />
+        android:id="@+id/lvUpdateMenu" />
 
 
 </RelativeLayout>

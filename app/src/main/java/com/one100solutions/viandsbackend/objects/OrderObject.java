@@ -13,6 +13,36 @@ public class OrderObject {
     private String time;
     private String type;
 
+    public long getPhone() {
+        return phone;
+    }
+
+    public void setPhone(long phone) {
+        this.phone = phone;
+    }
+
+    private long phone;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    private String name;
+
+    public int getTotalAmount() {
+        return totalAmount;
+    }
+
+    public void setTotalAmount(int totalAmount) {
+        this.totalAmount = totalAmount;
+    }
+
+    private int totalAmount;
+
     public boolean isComplete() {
         return complete;
     }
@@ -22,6 +52,16 @@ public class OrderObject {
     }
 
     private boolean complete;
+
+    public boolean isDelivered() {
+        return delivered;
+    }
+
+    public void setDelivered(boolean delivered) {
+        this.delivered = delivered;
+    }
+
+    private boolean delivered;
 
     public String getMessage() {
         return message;

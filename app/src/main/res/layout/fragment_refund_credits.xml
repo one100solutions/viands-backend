@@ -16,32 +16,37 @@
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_send_notif_title"
-            android:id="@+id/edtTitle"
-            app:iconLeft="@drawable/ic_mail_white_24dp"
+            android:hint="@string/hint_refund_credits_phone"
+            android:id="@+id/edtUserPhone"
+            android:inputType="phone"
+            app:iconLeft="@drawable/ic_phone"
             app:baseColor="@color/gray_hot"
-            app:iconPadding="0dp" />
+            app:iconPadding="0dp"
+            app:maxCharacters="10"
+            app:minCharacters="10" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_send_notif_message"
-            android:id="@+id/edtMessage"
-            app:iconLeft="@drawable/ic_create_white_24dp"
+            android:hint="@string/hint_refund_credits_amount"
+            android:id="@+id/edtAmount"
+            android:inputType="number"
+            app:iconLeft="@drawable/ic_credit_card_white_24dp"
             app:baseColor="@color/gray_hot"
-            app:iconPadding="0dp" />
+            app:iconPadding="0dp"
+            app:maxCharacters="30" />
 
 
     </LinearLayout>
 
     <com.gc.materialdesign.views.ButtonRectangle
-        android:id="@+id/btSendNotification"
+        android:id="@+id/btRefundCredits"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        android:text="@string/hint_send_bt_notif_message"
+        android:text="@string/refund_credits"
         android:layout_alignParentBottom="true"
-        app:animate="false"
-        android:textSize="@dimen/button_text_size" />
+        android:textSize="@dimen/button_text_size"
+        app:animate="false" />
 
 </RelativeLayout>

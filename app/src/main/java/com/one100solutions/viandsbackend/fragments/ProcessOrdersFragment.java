@@ -3,6 +3,7 @@ package com.one100solutions.viandsbackend.fragments;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,6 +29,8 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 
 import it.gmariotti.cardslib.library.internal.Card;
@@ -65,6 +68,14 @@ public class ProcessOrdersFragment extends Fragment {
         super.onResume();
     }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+        handler.removeCallbacks(runnable);
+    }
+
+    Handler handler;
+    Runnable runnable;
 
     public void initView(View view) {
 
@@ -87,30 +98,36 @@ public class ProcessOrdersFragment extends Fragment {
         }
 
 
-        ViandsApplication.getMenu(getActivity(), new OnJSONResponseCallback() {
+        handler = new Handler();
+        runnable = new Runnable() {
+            @Override
+            public void run() {
+                updateOrders();
+                handler.postDelayed(this, 5 * 1000);
+            }
+        };
+        handler.postDelayed(runnable, 5 * 1000);
+
+
+    }
+
+
+    public void updateOrders() {
+        ordersList.clear();
+        fetchOrders(getActivity(), new OnJSONResponseCallback() {
             @Override
             public void onJSONResponse(boolean success) {
                 if (success) {
-                    fetchOrders(getActivity(), new OnJSONResponseCallback() {
-                        @Override
-                        public void onJSONResponse(boolean success) {
-                            if (success) {
-                                showCards();
-                            }
-                        }
-                    });
+                    showCards();
                 }
             }
         });
-
-
     }
 
     public void showCards() {
         cards1.clear();
 
         for (int i = 0; i < ordersList.size(); i++) {
-            System.out.println(ordersList.get(i));
 
             OrderCard orderCard = new OrderCard(getActivity(), ordersList.get(i));
             orderCard.init();
@@ -129,6 +146,7 @@ public class ProcessOrdersFragment extends Fragment {
                         public void onJSONResponse(boolean success) {
                             if (success) {
                                 System.out.println("Order completed successfully");
+
                             }
                         }
                     });
@@ -140,7 +158,7 @@ public class ProcessOrdersFragment extends Fragment {
         mCardArrayAdapter1.notifyDataSetChanged();
     }
 
-    public void addToProcessingList(OrderObject orderObject) {
+    public void addToProcessingList(final OrderObject orderObject) {
         OrderCard newCard = new OrderCard(getActivity(), orderObject);
         newCard.init();
         newCard.setSwipeable(true);
@@ -149,6 +167,16 @@ public class ProcessOrdersFragment extends Fragment {
             public void onSwipe(Card card) {
                 //Do something
                 new SnackBar(getActivity(), "Processing completed").show();
+
+                ViandsApplication.orderDelivered(getActivity(), orderObject.getId(), new OnJSONResponseCallback() {
+                    @Override
+                    public void onJSONResponse(boolean success) {
+                        if (success) {
+                            System.out.println("Order delivered successfully");
+                        }
+                    }
+                });
+
             }
         });
         cards2.add(newCard);
@@ -204,6 +232,9 @@ public class ProcessOrdersFragment extends Fragment {
                         String message = response.getString("message");
                         showDialog(context, message);
                     } else {
+
+                        ordersList.clear();
+
                         JSONArray orderJSONArray = response.getJSONArray("orders");
                         for (int i = 0; i < orderJSONArray.length(); i++) {
                             JSONObject orderJSONObject = orderJSONArray.getJSONObject(i);
@@ -214,12 +245,13 @@ public class ProcessOrdersFragment extends Fragment {
                             orderObject.setTime(orderJSONObject.getString("time"));
                             orderObject.setType(orderJSONObject.getString("type"));
                             orderObject.setId(orderJSONObject.getString("id"));
+
+                            orderObject.setTotalAmount(orderJSONObject.getInt("total_amount"));
+                            orderObject.setName(orderJSONObject.getString("name"));
+                            orderObject.setPhone(orderJSONObject.getLong("phone"));
                             //System.out.println(orderObject);
 
                             orderObject.setComplete(orderJSONObject.getBoolean("complete"));
-
-                            System.out.println(orderObject);
-                            System.out.println("DOne");
 
                             ArrayList<CartObject> itemsList = new ArrayList<CartObject>();
                             JSONArray itemsJSONArray = orderJSONObject.getJSONArray("items");
@@ -235,7 +267,31 @@ public class ProcessOrdersFragment extends Fragment {
 
                             }
                             orderObject.setItems(itemsList);
-                            ordersList.add(orderObject);
+
+                            System.out.println("Type: " + orderObject.getType());
+
+                            if (orderObject.getType().equals("later")) {
+                                String timeDeliver = orderJSONObject.getString("time_deliver");
+                                String[] arr = timeDeliver.split(":");
+                                int orderHr = Integer.parseInt(arr[0]);
+                                int orderMin = Integer.parseInt(arr[1]);
+
+                                Calendar calOrder = Calendar.getInstance();
+                                calOrder.set(Calendar.HOUR_OF_DAY, orderHr);
+                                calOrder.set(Calendar.MINUTE, orderMin);
+
+                                Date orderDate = calOrder.getTime();
+
+                                long duration = (orderDate.getTime() - new Date().getTime()) / 1000 % 60;
+                                System.out.println("Date:" + orderDate);
+                                System.out.println("Duration:" + duration);
+                                // 10 min = 10 * 60s
+                                if (duration <= 10 * 60) {
+                                    ordersList.add(orderObject);
+                                }
+                            } else {
+                                ordersList.add(orderObject);
+                            }
                         }
                         callback.onJSONResponse(true);
                     }

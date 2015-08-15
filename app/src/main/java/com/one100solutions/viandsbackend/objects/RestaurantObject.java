@@ -13,16 +13,15 @@ public class RestaurantObject {
     private ArrayList<DishObject> menu;
 
 
-
-    public boolean isOpen() {
-        return open;
+    public boolean isClosed() {
+        return close;
     }
 
-    public void setOpen(boolean open) {
-        this.open = open;
+    public void setClose(boolean close) {
+        this.close = close;
     }
 
-    private boolean open;
+    private boolean close;
 
     public String getId() {
         return id;

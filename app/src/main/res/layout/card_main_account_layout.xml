@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:weightSum="6">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/main_account_card_text_size"
+        android:text="id"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:id="@+id/tvAccountId" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/main_account_card_text_size"
+        android:text="name"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:id="@+id/tvAccountName" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/main_account_card_text_size"
+        android:text="phone"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:id="@+id/tvAccountPhone" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/main_account_card_text_size"
+        android:text="recharged"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:id="@+id/tvAccountRecharged" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/main_account_card_text_size"
+        android:text="spent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:id="@+id/tvAccountSpent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/main_account_card_text_size"
+        android:text="balance"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:id="@+id/tvAccountBalance" />
+
+</LinearLayout>

@@ -108,7 +108,7 @@ public class ViandsApplication extends Application {
                             restaurant.setId(obj.getString("_id"));
                             restaurant.setName(obj.getString("name"));
                             restaurant.setLocation(obj.getString("location"));
-                            restaurant.setOpen(true);
+                            restaurant.setClose(obj.getBoolean("close"));
 
                             ArrayList<DishObject> menu = new ArrayList<DishObject>();
                             JSONArray menuJSON = obj.getJSONArray("menu");
@@ -360,6 +360,78 @@ public class ViandsApplication extends Application {
         });
     }
 
+    /**
+     * Refund credits API
+     */
+    public static void refundCredits(final Context context, final String userPhone, final String amount, final OnJSONResponseCallback callback) {
+
+        if (!ConnectionDetector.isConnectingToInternet(context)) {
+            showInternetConnectionDialog(context);
+            callback.onJSONResponse(false);
+            return;
+        }
+
+        SessionManager sessionManager = new SessionManager(context);
+        String token = sessionManager.getUserDetails().getToken();
+        String userName = sessionManager.getUserDetails().getName();
+
+        HashMap<String, String> paramMap = new HashMap<String, String>();
+        paramMap.put("username", userName);
+        paramMap.put("tar_phone", userPhone);
+        paramMap.put("amount", amount);
+        paramMap.put("token", token);
+        RequestParams params = new RequestParams(paramMap);
+
+        ViandsRestClient.post(ViandsRestClient.REFUND_CREDITS, params, new JsonHttpResponseHandler() {
+            @Override
+            public void onStart() {
+                progress = new MaterialDialog.Builder(context)
+                        .title(R.string.dialog_refund_credits)
+                        .content(R.string.dialog_please_wait)
+                        .progress(true, 0).show();
+            }
+
+            @Override
+            public void onFinish() {
+                progress.dismiss();
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                // If the response is JSONObject instead of expected JSONArray
+                System.out.println("Response:" + response);
+                try {
+                    boolean error = response.getBoolean("err");
+                    if (error) {
+                        String message = response.getString("message");
+                        showDialog(context, message);
+                        callback.onJSONResponse(false);
+
+                    } else {
+
+                        String message = response.getString("message");
+                        showDialog(context, message);
+
+                        callback.onJSONResponse(true);
+
+                    }
+                } catch (Exception e) {
+                    new SnackBar((Activity) context, ViandsRestClient.FAILURE).show();
+                    callback.onJSONResponse(false);
+
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable error, JSONObject jsonObject) {
+                new SnackBar((Activity) context, ViandsRestClient.FAILURE).show();
+                callback.onJSONResponse(false);
+            }
+
+
+        });
+    }
+
 
     /**
      * Update menu API
@@ -518,16 +590,132 @@ public class ViandsApplication extends Application {
         ViandsRestClient.post(ViandsRestClient.ORDER_COMPLETE, params, new JsonHttpResponseHandler() {
             @Override
             public void onStart() {
-                progress = new MaterialDialog.Builder(context)
-                        .title(R.string.dialog_order_complete)
-                        .content(R.string.dialog_please_wait)
-                        .progress(true, 0).show();
+
             }
 
             @Override
             public void onFinish() {
-                progress.dismiss();
+
             }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                // If the response is JSONObject instead of expected JSONArray
+                System.out.println("Response:" + response);
+                try {
+                    boolean error = response.getBoolean("err");
+                    if (error) {
+                        String message = response.getString("message");
+                        showDialog(context, message);
+                        callback.onJSONResponse(false);
+
+                    } else {
+
+                        // String message = response.getString("message");
+                        //showDialog(context, message);
+                        callback.onJSONResponse(true);
+                    }
+                } catch (Exception e) {
+                    new SnackBar((Activity) context, ViandsRestClient.FAILURE).show();
+                    callback.onJSONResponse(false);
+
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable error, JSONObject jsonObject) {
+                new SnackBar((Activity) context, ViandsRestClient.FAILURE).show();
+                callback.onJSONResponse(false);
+            }
+
+
+        });
+    }
+
+    /**
+     * Order complete
+     */
+    public static void orderDelivered(final Context context, final String orderId, final OnJSONResponseCallback callback) {
+
+        if (!ConnectionDetector.isConnectingToInternet(context)) {
+            showInternetConnectionDialog(context);
+            callback.onJSONResponse(false);
+            return;
+        }
+
+        SessionManager sessionManager = new SessionManager(context);
+        String token = sessionManager.getUserDetails().getToken();
+
+        HashMap<String, String> paramMap = new HashMap<String, String>();
+        paramMap.put("order_id", orderId);
+        paramMap.put("token", token);
+        RequestParams params = new RequestParams(paramMap);
+
+        ViandsRestClient.post(ViandsRestClient.ORDER_DELIVERED, params, new JsonHttpResponseHandler() {
+            @Override
+            public void onStart() {
+
+            }
+
+            @Override
+            public void onFinish() {
+
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                // If the response is JSONObject instead of expected JSONArray
+                System.out.println("Response:" + response);
+                try {
+                    boolean error = response.getBoolean("err");
+                    if (error) {
+                        String message = response.getString("message");
+                        showDialog(context, message);
+                        callback.onJSONResponse(false);
+
+                    } else {
+
+                        String message = response.getString("message");
+                        showDialog(context, message);
+                        callback.onJSONResponse(true);
+                    }
+                } catch (Exception e) {
+                    new SnackBar((Activity) context, ViandsRestClient.FAILURE).show();
+                    callback.onJSONResponse(false);
+
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable error, JSONObject jsonObject) {
+                new SnackBar((Activity) context, ViandsRestClient.FAILURE).show();
+                callback.onJSONResponse(false);
+            }
+
+
+        });
+    }
+
+    /**
+     * Open Close
+     */
+    public static void openCloseRestaurant(final Context context, final boolean close, final OnJSONResponseCallback callback) {
+
+        if (!ConnectionDetector.isConnectingToInternet(context)) {
+            showInternetConnectionDialog(context);
+            callback.onJSONResponse(false);
+            return;
+        }
+
+        SessionManager sessionManager = new SessionManager(context);
+        String token = sessionManager.getUserDetails().getToken();
+
+        HashMap<String, String> paramMap = new HashMap<String, String>();
+        paramMap.put("restaurant_id", ViandsApplication.restaurantList.get(0).getId());
+        paramMap.put("close", String.valueOf(!close));
+        RequestParams params = new RequestParams(paramMap);
+
+        ViandsRestClient.post(ViandsRestClient.CLOSE_RESTAURANT, params, new JsonHttpResponseHandler() {
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
